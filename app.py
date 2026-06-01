@@ -7,6 +7,12 @@ import google.generativeai as genai
 from dotenv import load_dotenv
 import os
 
+st.set_page_config(
+    page_title="PDF Chat Assistant",
+    page_icon="📚",
+    layout="wide"
+)
+
 # ==========================
 # Gemini Configuration
 # ==========================
@@ -180,11 +186,7 @@ Question:
 # Streamlit Page Config
 # ==========================
 
-st.set_page_config(
-    page_title="PDF Chat Assistant",
-    page_icon="📚",
-    layout="wide"
-)
+
 
 st.title("📚 PDF Chat Assistant")
 
@@ -198,6 +200,10 @@ if "messages" not in st.session_state:
 # ==========================
 # PDF Upload
 # ==========================
+
+st.warning(
+    "⚠️ For best results, upload text-based PDFs. Image-heavy, scanned, handwritten, or diagram-rich PDFs may reduce answer accuracy."
+)
 
 pdf = st.file_uploader(
     "Upload PDF",
