@@ -222,7 +222,7 @@ Answer
 Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/sivapothula000/PDF_RAG_ASSISTANT.git
 ```
 
 Move into the project directory:
